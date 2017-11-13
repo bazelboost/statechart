@@ -1,0 +1,21 @@
+
+cc_library(
+	name = "statechart",
+	visibility = ["//visibility:public"],
+	includes = [
+		"include/",
+	],
+	hdrs = glob([
+		"include/boost/**/*.hpp",
+		"include/boost/**/*.ipp",
+	]),
+	srcs = [
+	],
+	defines = [
+	],
+	deps = [
+		"@com_github_bazelboost_mpl//:mpl",
+		"@com_github_bazelboost_detail//:detail",
+		"@com_github_bazelboost_assert//:assert"
+	],
+)
